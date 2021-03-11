@@ -1,0 +1,43 @@
+:root {
+    /* Main colors */
+    --theme-yellow: #ff9f1c;
+    --theme-red: #ff4040;
+    --theme-green: #2dc4b6;
+
+    /* Grey Colors */
+    --theme-dark: #0a1014;
+    --theme-grey: #1b2329;
+    --theme-mid-grey: #353f4c;
+    --theme-light-grey: #7a8c99;
+    --theme-white: #fff;
+
+    --theme-color-default: var(--theme-white);
+    --theme-color-secundary: var(--theme-light-grey);
+    --theme-color-active: var(--theme-green);
+    --theme-color-negative: var(--theme-red);
+    --theme-color-highlight: var(--theme-yellow);
+    --theme-color-disabled: var(--theme-mid-grey);
+
+    --theme-font-weight-bold: 700;
+    --theme-font-weight-medium: 500;
+    --theme-font-weight-regular: 400;
+
+    --theme-font-size-bold: 80pt;
+    --theme-font-size-medium-high: 24pt;
+    --theme-font-size-medium: 20pt;
+    --theme-font-size-regular: 16pt;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    color: var(--theme-mid-grey);
+    font-family: Roboto, sans-serif;
+    font-size: var(--theme-font-weight-regular);
+    font-weight: var(--theme-font-size-regular);
+}
+
+* {
+    box-sizing: border-box;
+}
