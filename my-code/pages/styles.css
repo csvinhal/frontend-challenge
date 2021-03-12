@@ -1,22 +1,22 @@
 :root {
     /* Main colors */
-    --theme-yellow: #ff9f1c;
-    --theme-red: #ff4040;
-    --theme-green: #2dc4b6;
+    --theme-color-yellow: #ff9f1c;
+    --theme-color-red: #ff4040;
+    --theme-color-green: #2dc4b6;
 
     /* Grey Colors */
-    --theme-dark: #0a1014;
-    --theme-grey: #1b2329;
-    --theme-mid-grey: #353f4c;
-    --theme-light-grey: #7a8c99;
-    --theme-white: #fff;
+    --theme-color-dark: #0a1014;
+    --theme-color-grey: #1b2329;
+    --theme-color-mid-grey: #353f4c;
+    --theme-color-light-grey: #7a8c99;
+    --theme-color-white: #fff;
 
-    --theme-color-default: var(--theme-white);
-    --theme-color-secundary: var(--theme-light-grey);
-    --theme-color-active: var(--theme-green);
-    --theme-color-negative: var(--theme-red);
-    --theme-color-highlight: var(--theme-yellow);
-    --theme-color-disabled: var(--theme-mid-grey);
+    --theme-color-default: var(--theme-color-white);
+    --theme-color-secundary: var(--theme-color-light-grey);
+    --theme-color-active: var(--theme-color-green);
+    --theme-color-negative: var(--theme-color-red);
+    --theme-color-highlight: var(--theme-color-yellow);
+    --theme-color-disabled: var(--theme-color-mid-grey);
 
     --theme-font-weight-bold: 700;
     --theme-font-weight-medium: 500;

@@ -58,6 +58,7 @@
     "jest-watch-typeahead": "^0.6.1",
     "lint-staged": "^10.0.10",
     "prettier": "^2.2.1",
+    "storybook-addon-pseudo-states": "^1.0.0",
     "typescript": "^4.1.3"
   }
 }
