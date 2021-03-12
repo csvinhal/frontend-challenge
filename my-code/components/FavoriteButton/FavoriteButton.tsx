@@ -14,7 +14,7 @@ const FavoriteButton = ({ children, favorite }: Props) => {
         <button className="button">
             <Icon
                 className={cx('button__icon', {
-                    'icon--is-favorite': favorite,
+                    'button__icon--is-favorite': favorite,
                 })}
                 icon="heart"
             />
@@ -49,7 +49,7 @@ const FavoriteButton = ({ children, favorite }: Props) => {
 
                 .button:hover .button__icon,
                 .button:active .button__icon,
-                .icon--is-favorite {
+                .button__icon--is-favorite {
                     color: var(--theme-color-white);
                 }
             `}</style>
