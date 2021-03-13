@@ -22,10 +22,10 @@
     --theme-font-weight-medium: 500;
     --theme-font-weight-regular: 400;
 
-    --theme-font-size-bold: 80pt;
-    --theme-font-size-medium-high: 24pt;
-    --theme-font-size-medium: 20pt;
-    --theme-font-size-regular: 16pt;
+    --theme-font-size-bold: 80px;
+    --theme-font-size-medium-high: 24px;
+    --theme-font-size-medium: 20px;
+    --theme-font-size-regular: 16px;
 }
 
 html,
