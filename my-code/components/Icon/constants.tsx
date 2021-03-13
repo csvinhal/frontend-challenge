@@ -30,7 +30,7 @@ export default {
             </g>
         </g>
     ),
-    heartFull: (
+    arrow: (
         <g
             id="Styleguide-presentation"
             stroke="none"
@@ -38,10 +38,10 @@ export default {
             fill="none"
             fill-rule="evenodd"
         >
-            <g id="8.icons" transform="translate(-610.000000, -344.000000)">
+            <g id="8.icons" transform="translate(-794.000000, -344.000000)">
                 <g
-                    id="24x24/icon_heart"
-                    transform="translate(610.000000, 344.000000)"
+                    id="icon__arrow"
+                    transform="translate(794.000000, 344.000000)"
                 >
                     <rect
                         id="Rectangle-13"
@@ -50,12 +50,19 @@ export default {
                         width="24"
                         height="24"
                     ></rect>
-                    <path
-                        d="M12,6.28384428 C24.3324939,-3.604485 26.3324939,15.2832147 12,20.9494617 C-2.33249393,16.3942559 -0.332493933,-3.604485 12,6.28384428 Z"
-                        id="Rectangle-12"
-                        stroke="#FFFFFF"
+                    <polyline
+                        id="Rectangle-3"
+                        stroke="currentColor"
                         stroke-width="2"
-                        fill="#FFFFFF"
+                        transform="translate(9.000000, 12.000000) rotate(-45.000000) translate(-9.000000, -12.000000) "
+                        points="4 17 4 7 4 7 14 7"
+                    ></polyline>
+                    <path
+                        d="M3,12 L23,12"
+                        id="Line"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="square"
                     ></path>
                 </g>
             </g>

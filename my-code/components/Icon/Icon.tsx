@@ -1,4 +1,3 @@
-import React from 'react'
 import icons from './constants'
 
 export type Icons = keyof typeof icons
