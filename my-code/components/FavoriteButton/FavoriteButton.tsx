@@ -2,7 +2,7 @@ import { ReactNode, useMemo } from 'react'
 import cx from 'classnames'
 
 import Typography from '../Typography/Typography'
-import Icon, { Icons } from '../Icon/Icon'
+import Icon from '../Icon/Icon'
 
 interface Props {
     children: ReactNode
@@ -26,7 +26,7 @@ const FavoriteButton = ({ children, favorite }: Props) => {
                     color: var(--theme-color-secundary);
                     border: 1px solid var(--theme-color-secundary);
                     border-radius: 4px;
-                    background-color: var(--theme-color-dark);
+                    background-color: transparent;
                     padding: 12px 16px 12px 12px;
                     outline: none;
                 }
@@ -42,13 +42,13 @@ const FavoriteButton = ({ children, favorite }: Props) => {
                     background-color: var(--theme-color-red);
                 }
 
-                .button__icon {
+                .button :global(.button__icon) {
                     color: transparent;
                     margin-right: 12px;
                 }
 
-                .button:hover .button__icon,
-                .button:active .button__icon,
+                .button:hover :global(.button__icon),
+                .button:active :global(.button__icon),
                 .button__icon--is-favorite {
                     color: var(--theme-color-white);
                 }

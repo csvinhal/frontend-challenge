@@ -8,15 +8,15 @@ const ButtonIcon = () => {
                 .button {
                     border: none;
                     padding: 8px;
-                    background-color: var(--theme-color-dark);
+                    background-color: transparent;
                     outline: none;
                 }
 
-                .button__icon {
+                .button :global(.button__icon) {
                     color: #8B93A6;
                 }
 
-                .button .button__icon:hover {
+                .button:hover :global(.button__icon) {
                     color: var(--theme-color-white);
                 }
             `}</style>

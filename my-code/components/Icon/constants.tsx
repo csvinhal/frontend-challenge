@@ -3,9 +3,9 @@ export default {
         <g
             id="Styleguide-presentation"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
         >
             <g id="8.icons" transform="translate(-530.000000, -344.000000)">
                 <g
@@ -24,7 +24,7 @@ export default {
                         id="Rectangle-12"
                         fill="currentColor"
                         stroke="#FFFFFF"
-                        stroke-width="2"
+                        strokeWidth="2"
                     ></path>
                 </g>
             </g>
@@ -34,9 +34,9 @@ export default {
         <g
             id="Styleguide-presentation"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
         >
             <g id="8.icons" transform="translate(-794.000000, -344.000000)">
                 <g
@@ -53,7 +53,7 @@ export default {
                     <polyline
                         id="Rectangle-3"
                         stroke="currentColor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         transform="translate(9.000000, 12.000000) rotate(-45.000000) translate(-9.000000, -12.000000) "
                         points="4 17 4 7 4 7 14 7"
                     ></polyline>
@@ -61,9 +61,48 @@ export default {
                         d="M3,12 L23,12"
                         id="Line"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="square"
+                        strokeWidth="2"
+                        strokeLinecap="square"
                     ></path>
+                </g>
+            </g>
+        </g>
+    ),
+    magnifier: (
+        <g
+            id="Styleguide-presentation"
+            stroke="none"
+            strokeWidth="1"
+            fill="none"
+            fillRule="evenodd"
+        >
+            <g id="8.icons" transform="translate(-674.000000, -348.000000)">
+                <g
+                    id="icon__magnifier"
+                    transform="translate(674.000000, 348.000000)"
+                >
+                    <rect
+                        id="icon__search"
+                        x="0"
+                        y="0"
+                        width="16"
+                        height="16"
+                    ></rect>
+                    <path
+                        d="M14.6666667,14.6666667 L10.6666667,10.6666667"
+                        id="Line"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="square"
+                    ></path>
+                    <circle
+                        id="Oval-4"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        cx="6.66666667"
+                        cy="6.66666667"
+                        r="5.33333333"
+                    ></circle>
                 </g>
             </g>
         </g>

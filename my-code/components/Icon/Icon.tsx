@@ -7,15 +7,16 @@ interface Props {
     icon: Icons
     width?: string
     height?: string
+    viewBox?: string
 }
 
-const Icon = ({ className, icon, width, height }: Props) => {
+const Icon = ({ className, icon, width, height, viewBox }: Props) => {
     return (
         <svg
             className={className}
             width={width}
             height={height}
-            viewBox="0 0 24 24"
+            viewBox={viewBox}
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
         >
@@ -25,8 +26,9 @@ const Icon = ({ className, icon, width, height }: Props) => {
 }
 
 Icon.defaultProps = {
-    width: '22px',
-    height: '22px',
+    width: '24px',
+    height: '24px',
+    viewBox: '0 0 24 24',
 }
 
 export default Icon
