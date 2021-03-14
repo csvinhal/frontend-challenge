@@ -9,7 +9,7 @@ const Grid = ({ children }: Props) => {
     return (
         <div className={cx('grid')}>
             {children}
-            <style>{`
+            <style jsx>{`
                 .grid {
                     width: 100%;
                     display: flex;
