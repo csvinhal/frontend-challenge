@@ -2,8 +2,7 @@ import cx from 'classnames'
 import { forwardRef, InputHTMLAttributes } from 'react'
 import Icon from '../Icon/Icon'
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {
-}
+interface Props extends InputHTMLAttributes<HTMLInputElement> {}
 
 const SearchBar = forwardRef<HTMLInputElement, Props>((props, ref) => {
     return (
@@ -19,7 +18,15 @@ const SearchBar = forwardRef<HTMLInputElement, Props>((props, ref) => {
                 height="16px"
                 viewBox="0 0 16 16"
             />
-            <input className="search-bar__input" {...props} ref={ref} />
+            <label className="search-bar__label" htmlFor="search-bar">
+                {props.placeholder}
+            </label>
+            <input
+                id="search-bar"
+                className="search-bar__input"
+                {...props}
+                ref={ref}
+            />
             <style jsx>{`
                 .search-bar {
                     display: flex;
@@ -32,6 +39,10 @@ const SearchBar = forwardRef<HTMLInputElement, Props>((props, ref) => {
                 .search-bar :global(.search-bar__icon) {
                     color: var(--theme-color-light-grey);
                     margin-right: 12px;
+                }
+
+                .search-bar__label {
+                    display: none;
                 }
 
                 .search-bar .search-bar__input {
@@ -53,10 +64,9 @@ const SearchBar = forwardRef<HTMLInputElement, Props>((props, ref) => {
                     background-color: var(--theme-color-disabled);
                 }
 
-                input::placeholder{
+                input::placeholder {
                     color: var(--theme-color-light-grey);
                 }
-
 
                 input:-ms-input-placeholder {
                     color: var(--theme-color-light-grey);
