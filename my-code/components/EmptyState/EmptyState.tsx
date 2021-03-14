@@ -8,8 +8,6 @@ const EmptyState = () => {
                 src="/illustration-empty-state.png"
                 alt="Empty state image"
                 srcSet={`/illustration-empty-state@2x.png 2x`}
-                width={396}
-                height={193}
             />
             <Typography
                 className="empty-state__title"
@@ -18,7 +16,9 @@ const EmptyState = () => {
             >
                 Don't know what to search?
             </Typography>
-            <Typography color="secundary">Here's an offer you can't refuse</Typography>
+            <Typography color="secundary">
+                Here's an offer you can't refuse
+            </Typography>
             <style jsx>{`
                 .empty-state {
                     display: flex;
@@ -29,6 +29,10 @@ const EmptyState = () => {
 
                 .empty-state__img {
                     margin-bottom: 16px;
+                    max-width: 396px;
+                    max-height: 193px;
+                    height: 100%;
+                    width: 100%;
                 }
 
                 .empty-state :global(.empty-state__title) {

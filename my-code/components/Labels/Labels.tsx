@@ -34,12 +34,10 @@ const Labels = ({ classNames, label, withLogo }: Props) => {
                 .labels--with-logo {
                     border-width: 1px 1px 1px 0;
                     border-style: solid;
-                    border-color: var(--theme-color-mid-grey)
+                    border-color: var(--theme-color-mid-grey);
                 }
 
-                .labels--with-logo
-                    .labels--withLogo
-                    :global(.labels__typography) {
+                .labels:not(.labels--with-logo) :global(.labels__typography) {
                     color: var(--theme-color-dark);
                 }
             `}</style>
