@@ -3,7 +3,7 @@ import { ComponentProps } from 'react'
 import FavoriteButton from '../components/FavoriteButton/FavoriteButton'
 
 export default {
-    title: 'Favorite Button',
+    title: 'Components/Favorite Button',
     component: FavoriteButton,
 } as Meta
 

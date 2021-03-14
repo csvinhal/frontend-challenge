@@ -3,7 +3,7 @@ import { ComponentProps } from 'react'
 import MovieCard from '../components/MovieCard/MovieCard'
 
 export default {
-    title: 'Movie Card',
+    title: 'Components/Movie Card',
     component: MovieCard,
 } as Meta
 

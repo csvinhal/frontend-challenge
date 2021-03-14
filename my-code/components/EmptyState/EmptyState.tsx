@@ -9,11 +9,7 @@ const EmptyState = () => {
                 alt="Empty state image"
                 srcSet={`/illustration-empty-state@2x.png 2x`}
             />
-            <Typography
-                className="empty-state__title"
-                size="medium"
-                weight="medium"
-            >
+            <Typography className="empty-state__title" size="medium">
                 Don't know what to search?
             </Typography>
             <Typography color="secundary">

@@ -3,7 +3,7 @@ import { ComponentProps } from 'react'
 import EmptyState from '../components/EmptyState/EmptyState'
 
 export default {
-    title: 'Empty State',
+    title: 'Components/Empty State',
     component: EmptyState,
 } as Meta
 

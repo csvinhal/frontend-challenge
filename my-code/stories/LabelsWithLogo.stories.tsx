@@ -5,7 +5,7 @@ import RottenIcon from '../components/LabelsWithLogo/RottenLogo/RottenLogo'
 import LabelsWithLogo from '../components/LabelsWithLogo/LabelsWithLogo'
 
 export default {
-    title: 'Labels with logo',
+    title: 'Components/Labels with logo',
     component: LabelsWithLogo,
 } as Meta
 

@@ -3,7 +3,7 @@ import { ComponentProps } from 'react'
 import ButtonIcon from '../components/ButtonIcon/ButtonIcon'
 
 export default {
-    title: 'Button Icon',
+    title: 'Components/Button Icon',
     component: ButtonIcon,
 } as Meta
 

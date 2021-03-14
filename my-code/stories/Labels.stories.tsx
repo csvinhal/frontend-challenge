@@ -3,7 +3,7 @@ import { ComponentProps } from 'react'
 import Labels from '../components/Labels/Labels'
 
 export default {
-    title: 'Labels',
+    title: 'Components/Labels',
     component: Labels,
 } as Meta
 

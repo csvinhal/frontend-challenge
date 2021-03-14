@@ -3,7 +3,7 @@ import { ComponentProps } from 'react'
 import SearchBar from '../components/SearchBar/SearchBar'
 
 export default {
-    title: 'Search Bar',
+    title: 'Components/Search Bar',
     component: SearchBar,
 } as Meta
 
