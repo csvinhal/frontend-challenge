@@ -1,5 +1,5 @@
-import { ReactNode, useMemo } from 'react'
 import cx from 'classnames'
+import { ReactNode } from 'react'
 
 type HeadersMapping = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
@@ -12,8 +12,6 @@ type ElementMapping = HeadersMapping | 'p' | 'span'
  * regular -> 16pt / 0.16 tracking / 24 leading
  */
 type Sizes = 'bold' | 'medium-high' | 'medium' | 'regular'
-
-type Weights = 'bold' | 'medium' | 'regular'
 
 type Colors =
     | 'default'
@@ -28,18 +26,10 @@ interface Props {
     children: ReactNode
     element?: ElementMapping
     size?: Sizes
-    weight?: Weights
     color?: Colors
 }
 
-const Typography = ({
-    className,
-    children,
-    element,
-    size,
-    weight,
-    color,
-}: Props) => {
+const Typography = ({ className, children, element, size, color }: Props) => {
     const Component = element ? element : 'p'
 
     return (
@@ -48,7 +38,7 @@ const Typography = ({
             <style jsx>{`
                 .typography {
                     font-size: var(--theme-font-size-${size});
-                    font-weight: var(--theme-font-weight-${weight});
+                    font-weight: var(--theme-font-weight-${size});
                     color: var(--theme-color-${color});
                 }
             `}</style>
@@ -59,7 +49,6 @@ const Typography = ({
 Typography.defaultProps = {
     element: 'p',
     size: 'regular',
-    weight: 'regular',
     color: 'default',
 }
 

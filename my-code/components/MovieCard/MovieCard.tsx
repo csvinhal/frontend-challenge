@@ -44,6 +44,7 @@ const MovieCard = ({ favorite, href, srcImg, title, year }: Props) => {
                         width: 180px;
                         height: 240px;
                         overflow: hidden;
+                        margin: auto;
                     }
 
                     .movie-card__img {

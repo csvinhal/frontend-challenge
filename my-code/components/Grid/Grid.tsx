@@ -18,6 +18,11 @@ const Grid = ({ children }: Props) => {
                     flex-direction: row;
                     justify-content: flex-start;
                     align-items: stretch;
+                    width: calc(100% + 8px);
+                    margin: -4px;
+                }
+
+                @media (min-width: 576px) {
                     width: calc(100% + 16px);
                     margin: -8px;
                 }

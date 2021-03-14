@@ -3,7 +3,7 @@ import { ComponentProps } from 'react'
 import Typography from '../components/Typography/Typography'
 
 export default {
-    title: 'Typograpgy',
+    title: 'Design/Typograpgy',
     component: Typography,
 } as Meta
 
