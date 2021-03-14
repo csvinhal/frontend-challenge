@@ -32,6 +32,4 @@ Hover.args = { ...args }
 
 export const AddFavorites = Template.bind({})
 
-AddFavorites.parameters = { pseudo: { hover: true } }
-
-AddFavorites.args = { ...args }
+AddFavorites.args = { ...args, favorite: true }
