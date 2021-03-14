@@ -36,8 +36,18 @@ body {
     font-family: Roboto, sans-serif;
     font-size: var(--theme-font-weight-regular);
     font-weight: var(--theme-font-size-regular);
+    background-color: var(--theme-color-dark);
 }
 
 * {
     box-sizing: border-box;
+}
+
+a,
+p,
+span {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
 }
