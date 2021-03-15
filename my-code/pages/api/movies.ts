@@ -15,17 +15,45 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 `http://www.omdbapi.com/?s=${title}&apikey=${process.env.API_KEY}`,
             )
 
-            if (response.data.Response === 'False') {
-                return res.status(500).json(response.data.Error)
+            if (hasError(response.data.Response)) {
+                return handleError(res, response.data.Error)
             }
 
             const parsedData = parseResponse(response.data)
             return res.status(200).json(parsedData)
         } catch (e: any) {
-            return res.status(500).json(e)
+            return res.status(500).json({
+                title: 'Ops! Something went wrong.',
+                subtitle: 'Please try again later.',
+            })
         }
     }
     return res.status(400)
+}
+
+function hasError(response: 'True' | 'False'): boolean {
+    return response === 'False'
+}
+
+function handleError(res: NextApiResponse, error: string) {
+    switch (error) {
+        case 'Movie not found!':
+            return res.status(404).json({
+                title: "What a pity! We don't found this movie.",
+                subtitle: 'Try to search for another movie.',
+            })
+        case 'Too many results.':
+            return res.status(500).json({
+                title: 'We found too many results.',
+                subtitle:
+                    'Please try your search again with more specific keywords.',
+            })
+        default:
+            return res.status(500).json({
+                title: 'Ops! Something went wrong.',
+                subtitle: 'Please try again later.',
+            })
+    }
 }
 
 function parseResponse(data: OmdbMovieResponse): MovieResponse {
@@ -42,7 +70,9 @@ function parseMovie(omdbMovies: SearchResponse[]): Movie[] {
         title: movie.Title,
         imdb: movie.Title,
         year: movie.Year,
-        poster: movie.Poster,
+        poster: movie.Poster.includes('http')
+            ? movie.Poster
+            : `/${movie.Poster}`,
     }))
 }
 

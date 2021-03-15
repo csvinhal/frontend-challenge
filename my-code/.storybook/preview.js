@@ -1,5 +1,6 @@
 import * as nextImage from 'next/image'
 import '../pages/styles.css'
+import '../stories/styles.css'
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },

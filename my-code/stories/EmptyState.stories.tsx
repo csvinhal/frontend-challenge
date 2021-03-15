@@ -12,3 +12,8 @@ const Template: Story<ComponentProps<typeof EmptyState>> = ({ ...args }) => (
 )
 
 export const Default = Template.bind({})
+
+Default.args = {
+    title: "Don't know what to search?",
+    subtitle: "Here's an offer you can't refuse",
+}

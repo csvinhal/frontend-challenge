@@ -1,5 +1,6 @@
-import axios from 'axios'
+import axios, { AxiosError } from 'axios'
 import { useCallback, useEffect, useState } from 'react'
+import { ErrorResponse } from '../models/error'
 import { FetchMoviesState } from '../models/fetchMoviesState'
 import { MovieResponse } from '../models/movie'
 
@@ -39,11 +40,11 @@ export const fetchMovies = () => {
                 data: response.data,
                 error: null,
             })
-        } catch (e) {
+        } catch (e: unknown) {
             setState({
                 loading: false,
                 data: null,
-                error: e,
+                error: (<AxiosError<ErrorResponse>>e).response.data,
             })
         }
     }, [])
