@@ -1,18 +1,16 @@
 import axios from 'axios'
 import { useCallback, useEffect, useState } from 'react'
+import { FetchMoviesState } from '../models/fetchMoviesState'
+import { MovieResponse } from '../models/movie'
 
 const api = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: process.env.BASE_URL,
 })
 
 export const fetchMovies = () => {
-    const [state, setState] = useState<{
-        loading: boolean
-        data: any
-        error: any
-    }>({
+    const [state, setState] = useState<FetchMoviesState>({
         loading: false,
-        data: {},
+        data: null,
         error: null,
     })
     let timer = null
@@ -21,7 +19,7 @@ export const fetchMovies = () => {
         if (!title) {
             setState({
                 loading: false,
-                data: {},
+                data: null,
                 error: null,
             })
             return
@@ -29,11 +27,13 @@ export const fetchMovies = () => {
 
         setState({
             loading: true,
-            data: {},
+            data: null,
             error: null,
         })
         try {
-            const response = await api.get(`/api/movies`, { params: { title } })
+            const response = await api.get<MovieResponse>(`/api/movies`, {
+                params: { title },
+            })
             setState({
                 loading: false,
                 data: response.data,
@@ -42,7 +42,7 @@ export const fetchMovies = () => {
         } catch (e) {
             setState({
                 loading: false,
-                data: {},
+                data: null,
                 error: e,
             })
         }
