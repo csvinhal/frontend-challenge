@@ -1,4 +1,5 @@
 import cx from 'classnames'
+import Image from 'next/image'
 import Icon from '../Icon/Icon'
 import Typography from '../Typography/Typography'
 
@@ -13,9 +14,10 @@ interface Props {
 const MovieCard = ({ favorite, href, srcImg, title, year }: Props) => {
     return (
         <a className="movie-card" href={href}>
-            <img
+            <Image
                 className="movie-card__img"
                 src={srcImg}
+                layout="fill"
                 alt="Picture of the movie"
             />
             {favorite && (

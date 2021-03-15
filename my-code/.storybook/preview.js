@@ -1,3 +1,4 @@
+import * as nextImage from 'next/image'
 import '../pages/styles.css'
 
 export const parameters = {
@@ -12,3 +13,10 @@ export const parameters = {
         ],
     },
 }
+
+Object.defineProperty(nextImage, 'default', {
+    configurable: true,
+    value: props => {
+        return <img {...props} />
+    },
+})
