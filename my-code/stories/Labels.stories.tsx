@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Meta, Story } from '@storybook/react/types-6-0'
 import { ComponentProps } from 'react'
 import Labels from '../components/Labels/Labels'
 
@@ -8,11 +8,11 @@ export default {
 } as Meta
 
 const Template: Story<ComponentProps<typeof Labels>> = ({ ...args }) => (
-    <Labels {...args} />
+    <Labels {...args}>{}</Labels>
 )
 
 export const Default = Template.bind({})
 
 Default.args = {
-    label: '18+',
+    children: '18+'
 }
