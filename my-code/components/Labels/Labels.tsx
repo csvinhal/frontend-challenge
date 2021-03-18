@@ -5,12 +5,12 @@ import ImdbIcon from './ImdbLogo/ImdbIcon'
 import RottenIcon from './RottenLogo/RottenLogo'
 
 interface Props {
-    classNames?: string
+    className?: string
     children: ReactNode
     logo?: 'imdb' | 'rotten'
 }
 
-const Labels = ({ classNames, children, logo }: Props) => {
+const Labels = ({ className, children, logo }: Props) => {
     const logoIcon = useMemo(() => {
         if (!logo) {
             return null
@@ -24,9 +24,9 @@ const Labels = ({ classNames, children, logo }: Props) => {
         }
     }, [logo])
     return (
-        <div className={cx('labels', { labels__logo: logo })}>
+        <div className={cx('labels', { labels__logo: logo }, className)}>
             {logoIcon}
-            <div className={cx('labels__content', classNames)}>
+            <div className="labels__content">
                 <Typography
                     className="labels__typography"
                     element="span"
@@ -52,6 +52,7 @@ const Labels = ({ classNames, children, logo }: Props) => {
                 }
                 .labels__content {
                     display: inline-flex;
+                    align-items: center;
                     padding: 4px 6px;
                     background-color: var(--theme-color-light-grey);
                     border-radius: 4px;

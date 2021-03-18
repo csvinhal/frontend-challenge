@@ -40,6 +40,8 @@ const Typography = ({ className, children, element, size, color }: Props) => {
                     font-size: var(--theme-font-size-${size});
                     font-weight: var(--theme-font-weight-${size});
                     color: var(--theme-color-${color});
+                    line-height: var(--theme-line-height-${size});
+                    letter-spacing: var(--theme-letter-spacing-${size});
                 }
             `}</style>
         </Component>
