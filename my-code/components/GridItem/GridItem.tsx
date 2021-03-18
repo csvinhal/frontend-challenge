@@ -31,72 +31,70 @@ const GridItem = ({ children, xs, sm, md, lg, xl }: Props) => {
                     padding: 4px;
                 }
 
-                @media (min-width: 0px) {
-                    .grid-item-xs-true {
-                        flex-grow: 1;
-                        max-width: 100%;
-                        flex-basis: 0;
-                    }
-                    .grid-item-xs-1 {
-                        flex-grow: 0;
-                        max-width: 8.333333%;
-                        flex-basis: 8.333333%;
-                    }
-                    .grid-item-xs-2 {
-                        flex-grow: 0;
-                        max-width: 16.666667%;
-                        flex-basis: 16.666667%;
-                    }
-                    .grid-item-xs-3 {
-                        flex-grow: 0;
-                        max-width: 25%;
-                        flex-basis: 25%;
-                    }
-                    .grid-item-xs-4 {
-                        flex-grow: 0;
-                        max-width: 33.333333%;
-                        flex-basis: 33.333333%;
-                    }
-                    .grid-item-xs-5 {
-                        flex-grow: 0;
-                        max-width: 41.666667%;
-                        flex-basis: 41.666667%;
-                    }
-                    .grid-item-xs-6 {
-                        flex-grow: 0;
-                        max-width: 50%;
-                        flex-basis: 50%;
-                    }
-                    .grid-item-xs-7 {
-                        flex-grow: 0;
-                        max-width: 58.333333%;
-                        flex-basis: 58.333333%;
-                    }
-                    .grid-item-xs-8 {
-                        flex-grow: 0;
-                        max-width: 66.666667%;
-                        flex-basis: 66.666667%;
-                    }
-                    .grid-item-xs-9 {
-                        flex-grow: 0;
-                        max-width: 75%;
-                        flex-basis: 75%;
-                    }
-                    .grid-item-xs-10 {
-                        flex-grow: 0;
-                        max-width: 83.333333%;
-                        flex-basis: 83.333333%;
-                    }
-                    .grid-item-xs-11 {
-                        flex-grow: 0;
-                        max-width: 91.666667%;
-                        flex-basis: 91.666667%;
-                    }
-                    .grid-item-xs-12 {
-                        flex-grow: 0;
-                        max-width: 100%;
-                        flex-basis: 100%;
-                    }
+                .grid-item-xs-true {
+                    flex-grow: 1;
+                    max-width: 100%;
+                    flex-basis: 0;
+                }
+                .grid-item-xs-1 {
+                    flex-grow: 0;
+                    max-width: 8.333333%;
+                    flex-basis: 8.333333%;
+                }
+                .grid-item-xs-2 {
+                    flex-grow: 0;
+                    max-width: 16.666667%;
+                    flex-basis: 16.666667%;
+                }
+                .grid-item-xs-3 {
+                    flex-grow: 0;
+                    max-width: 25%;
+                    flex-basis: 25%;
+                }
+                .grid-item-xs-4 {
+                    flex-grow: 0;
+                    max-width: 33.333333%;
+                    flex-basis: 33.333333%;
+                }
+                .grid-item-xs-5 {
+                    flex-grow: 0;
+                    max-width: 41.666667%;
+                    flex-basis: 41.666667%;
+                }
+                .grid-item-xs-6 {
+                    flex-grow: 0;
+                    max-width: 50%;
+                    flex-basis: 50%;
+                }
+                .grid-item-xs-7 {
+                    flex-grow: 0;
+                    max-width: 58.333333%;
+                    flex-basis: 58.333333%;
+                }
+                .grid-item-xs-8 {
+                    flex-grow: 0;
+                    max-width: 66.666667%;
+                    flex-basis: 66.666667%;
+                }
+                .grid-item-xs-9 {
+                    flex-grow: 0;
+                    max-width: 75%;
+                    flex-basis: 75%;
+                }
+                .grid-item-xs-10 {
+                    flex-grow: 0;
+                    max-width: 83.333333%;
+                    flex-basis: 83.333333%;
+                }
+                .grid-item-xs-11 {
+                    flex-grow: 0;
+                    max-width: 91.666667%;
+                    flex-basis: 91.666667%;
+                }
+                .grid-item-xs-12 {
+                    flex-grow: 0;
+                    max-width: 100%;
+                    flex-basis: 100%;
                 }
 
                 @media (min-width: 576px) {

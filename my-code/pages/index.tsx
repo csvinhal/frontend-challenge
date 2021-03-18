@@ -33,7 +33,7 @@ export const Home = (): JSX.Element => {
         )
 
     return (
-        <Layout className="container">
+        <Layout className="container mb-3">
             <Grid>
                 <GridItem xs>
                     <div
@@ -54,10 +54,6 @@ export const Home = (): JSX.Element => {
             {content}
 
             <style jsx>{`
-                :global(.container) {
-                    margin-top: 24px;
-                }
-
                 .container__search {
                     margin-bottom: 32px;
                 }

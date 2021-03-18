@@ -12,7 +12,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         try {
             const { title } = req.query
             const response = await axios.get<OmdbMovieResponse>(
-                `http://www.omdbapi.com/?s=${title}&apikey=${process.env.API_KEY}`,
+                `http://www.omdbapi.com/?s=${title}&type=movie&apikey=${process.env.API_KEY}`,
             )
 
             if (hasError(response.data.Response)) {
@@ -68,7 +68,7 @@ function parseResponse(data: OmdbMovieResponse): MovieResponse {
 function parseMovie(omdbMovies: SearchResponse[]): Movie[] {
     return omdbMovies.map(movie => ({
         title: movie.Title,
-        imdb: movie.Title,
+        imdb: movie.imdbID,
         year: movie.Year,
         poster: movie.Poster.includes('http')
             ? movie.Poster

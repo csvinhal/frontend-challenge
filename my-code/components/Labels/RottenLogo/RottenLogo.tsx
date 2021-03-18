@@ -2,7 +2,7 @@ import Icon from '../../Icon/Icon'
 
 const RottenIcon = () => {
     return (
-        <div className="imdb-icon">
+        <div className="rotten-icon">
             <Icon
                 icon="rotten"
                 viewBox="0 0 16 16"
@@ -10,8 +10,8 @@ const RottenIcon = () => {
                 height="16px"
             />
             <style jsx>{`
-                .imdb-icon {
-                    padding: 8px;
+                .rotten-icon {
+                    padding: 0 12px;
                     display: inline-flex;
                     align-items: center;
                     border: 1px solid var(--theme-color-red);
