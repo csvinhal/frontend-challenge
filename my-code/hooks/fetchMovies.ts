@@ -8,15 +8,15 @@ const api = axios.create({
     baseURL: process.env.BASE_URL,
 })
 
-export const fetchMovies = () => {
+export const useFetchMovies = () => {
     const [state, setState] = useState<FetchMoviesState>({
         loading: false,
         data: null,
         error: null,
     })
-    let timer = null
+    const [timer, setTimer] = useState(null)
 
-    const useFetchMovies = useCallback(async title => {
+    const fetchMovies = useCallback(async title => {
         if (!title) {
             setState({
                 loading: false,
@@ -51,12 +51,15 @@ export const fetchMovies = () => {
 
     useEffect(() => {
         return () => clearTimeout(timer)
-    }, [])
+    }, [timer])
 
-    const effectFetchMovies = useCallback((title: string) => {
-        clearTimeout(timer)
-        timer = setTimeout(() => useFetchMovies(title), 500)
-    }, [])
+    const effectFetchMovies = useCallback(
+        (title: string) => {
+            clearTimeout(timer)
+            setTimer(setTimeout(() => fetchMovies(title), 500))
+        },
+        [fetchMovies, timer],
+    )
 
     return { state, effectFetchMovies }
 }

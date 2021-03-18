@@ -2,11 +2,12 @@ import cx from 'classnames'
 import { ButtonHTMLAttributes, forwardRef } from 'react'
 import Icon from '../Icon/Icon'
 
-interface Props extends ButtonHTMLAttributes<HTMLInputElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string
 }
 
-const ButtonIcon = forwardRef<HTMLInputElement, Props>(
+const ButtonIcon = forwardRef<HTMLButtonElement, Props>(
+    // eslint-disable-next-line react/prop-types
     ({ className, ...others }, ref) => (
         <button className={cx('button', className)} {...others} ref={ref}>
             <Icon className="button__icon" icon="arrow" />
@@ -31,5 +32,7 @@ const ButtonIcon = forwardRef<HTMLInputElement, Props>(
         </button>
     ),
 )
+
+ButtonIcon.displayName = 'ButtonIcon'
 
 export default ButtonIcon

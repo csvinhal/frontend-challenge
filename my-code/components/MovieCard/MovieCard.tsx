@@ -1,9 +1,10 @@
 import cx from 'classnames'
 import Image from 'next/image'
+import { AnchorHTMLAttributes, forwardRef } from 'react'
 import Icon from '../Icon/Icon'
 import Typography from '../Typography/Typography'
 
-interface Props {
+interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {
     favorite: boolean
     href: string
     title: string
@@ -11,9 +12,10 @@ interface Props {
     srcImg: string
 }
 
-const MovieCard = ({ favorite, href, srcImg, title, year }: Props) => {
-    return (
-        <a className="movie-card" href={href}>
+const MovieCard = forwardRef<HTMLAnchorElement, Props>(
+    // eslint-disable-next-line react/prop-types
+    ({ favorite, href, srcImg, title, year, ...others }, ref) => (
+        <a className="movie-card" href={href} {...others} ref={ref}>
             <Image
                 className="movie-card__img"
                 src={srcImg}
@@ -96,7 +98,9 @@ const MovieCard = ({ favorite, href, srcImg, title, year }: Props) => {
                 `}
             </style>
         </a>
-    )
-}
+    ),
+)
+
+MovieCard.displayName = 'MovieCard'
 
 export default MovieCard

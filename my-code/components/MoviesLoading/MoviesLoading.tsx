@@ -1,4 +1,3 @@
-import React from 'react'
 import Grid from '../Grid/Grid'
 import GridItem from '../GridItem/GridItem'
 import MovieSkeleton from '../MovieSkeleton/MovieSkeleton'

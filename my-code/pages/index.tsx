@@ -7,13 +7,13 @@ import Layout from '../components/Layout/Layout'
 import MovieList from '../components/MovieList/MovieList'
 import MoviesLoading from '../components/MoviesLoading/MoviesLoading'
 import SearchBar from '../components/SearchBar/SearchBar'
-import { fetchMovies } from '../hooks/fetchMovies'
+import { useFetchMovies } from '../hooks/fetchMovies'
 
 export const Home = (): JSX.Element => {
     const {
         state: { loading, data, error },
         effectFetchMovies,
-    } = fetchMovies()
+    } = useFetchMovies()
 
     let content
     if (loading) content = <MoviesLoading />

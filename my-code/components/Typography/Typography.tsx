@@ -30,7 +30,7 @@ interface Props {
 }
 
 const Typography = ({ className, children, element, size, color }: Props) => {
-    const Component = element ? element : 'p'
+    const Component = element
 
     return (
         <Component className={cx('typography', className)}>

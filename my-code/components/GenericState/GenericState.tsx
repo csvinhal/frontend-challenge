@@ -10,7 +10,12 @@ interface Props {
 const GenericState = ({ title, subtitle, image }: Props) => (
     <div className="empty-state">
         <div className="empty-state__img">
-            <Image src={image} alt="Empty state image" layout="fill" objectFit="contain" />
+            <Image
+                src={image}
+                alt="Empty state image"
+                layout="fill"
+                objectFit="contain"
+            />
         </div>
 
         <Typography className="empty-state__title" size="medium">

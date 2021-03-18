@@ -389,8 +389,4 @@ const GridItem = ({ children, xs, sm, md, lg, xl }: Props) => {
     )
 }
 
-GridItem.defaultProps = {
-    grow: false,
-}
-
 export default GridItem

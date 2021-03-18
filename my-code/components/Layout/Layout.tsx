@@ -20,7 +20,7 @@ const Layout = ({ className, children, showBackIcon }: Props) => {
             showBackIcon && (
                 <ButtonIcon className="layout__back" onClick={onClick} />
             ),
-        [showBackIcon],
+        [showBackIcon, onClick],
     )
 
     return (

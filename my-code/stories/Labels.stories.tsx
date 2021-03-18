@@ -14,5 +14,5 @@ const Template: Story<ComponentProps<typeof Labels>> = ({ ...args }) => (
 export const Default = Template.bind({})
 
 Default.args = {
-    children: '18+'
+    children: '18+',
 }

@@ -15,8 +15,8 @@ export const Default = Template.bind({})
 
 export const Hover = Template.bind({})
 
-Hover.parameters = { pseudo: { hover: true },  }
+Hover.parameters = { pseudo: { hover: true } }
 
 export const Active = Template.bind({})
 
-Active.parameters = { pseudo: { active: true },  }
+Active.parameters = { pseudo: { active: true } }

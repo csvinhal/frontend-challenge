@@ -1,4 +1,10 @@
-const Item = ({ children }) => {
+import { ReactNode } from 'react'
+
+interface Props {
+    children: ReactNode
+}
+
+const Item = ({ children }: Props) => {
     return (
         <div
             style={{

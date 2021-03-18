@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next'
 import axios from 'axios'
+import { NextApiRequest, NextApiResponse } from 'next'
 import {
     Movie,
     MovieResponse,
@@ -21,7 +21,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
             const parsedData = parseResponse(response.data)
             return res.status(200).json(parsedData)
-        } catch (e: any) {
+        } catch (e: unknown) {
             return res.status(500).json({
                 title: 'Ops! Something went wrong.',
                 subtitle: 'Please try again later.',

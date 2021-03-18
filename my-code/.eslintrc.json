@@ -1,29 +1,38 @@
 {
-    "root": true,
     "env": {
         "browser": true,
-        "es2021": true
+        "es6": true
     },
     "extends": [
         "plugin:react/recommended",
         "standard",
-        "react-hooks",
-        "prettier"
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:prettier/recommended"
     ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 12,
+        "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
+    "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
     "rules": {
         "prettier/prettier": "error",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
-        "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [".tsx"]
+            }
+        ],
         "import/prefer-default-export": "off",
         "import/extensions": [
             "error",
@@ -32,20 +41,16 @@
                 "ts": "never",
                 "tsx": "never"
             }
-        ]
+        ],
+        "react/react-in-jsx-scope": ["off"],
+        "@typescript-eslint/explicit-module-boundary-types": "off"
     },
-    "prettier/prettier": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
-    "import/prefer-default-export": "off",
-    "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-            "ts": "never",
-            "tsx": "never"
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        },
+        "react": {
+            "version": "detect"
         }
-    ],
-    "settings": { "import/core-modules": ["styled-jsx/css"] }
+    }
 }
