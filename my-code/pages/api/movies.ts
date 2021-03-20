@@ -1,25 +1,27 @@
 import axios from 'axios'
 import { NextApiRequest, NextApiResponse } from 'next'
+import Favorite from '../../models/favorite'
 import {
     Movie,
     MovieResponse,
     OmdbMovieResponse,
     SearchResponse,
 } from '../../models/movie'
+import dbConnect from '../../utils/mongo'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'GET') {
         try {
             const { title } = req.query
             const response = await axios.get<OmdbMovieResponse>(
-                `http://www.omdbapi.com/?s=${title}&type=movie&apikey=${process.env.API_KEY}`,
+                `${process.env.OMDB_API}/?s=${title}&type=movie&apikey=${process.env.API_KEY}`,
             )
 
             if (hasError(response.data.Response)) {
                 return handleError(res, response.data.Error)
             }
 
-            const parsedData = parseResponse(response.data)
+            const parsedData = await parseResponse(response.data)
             return res.status(200).json(parsedData)
         } catch (e: unknown) {
             return res.status(500).json({
@@ -56,8 +58,10 @@ function handleError(res: NextApiResponse, error: string) {
     }
 }
 
-function parseResponse(data: OmdbMovieResponse): MovieResponse {
-    const parsedMovies = parseMovie(data.Search)
+const parseResponse = async (
+    data: OmdbMovieResponse,
+): Promise<MovieResponse> => {
+    const parsedMovies = await parseMovie(data.Search)
 
     return {
         movies: parsedMovies,
@@ -65,7 +69,13 @@ function parseResponse(data: OmdbMovieResponse): MovieResponse {
     }
 }
 
-function parseMovie(omdbMovies: SearchResponse[]): Movie[] {
+const parseMovie = async (omdbMovies: SearchResponse[]): Promise<Movie[]> => {
+    const imdbs = omdbMovies.map(movie => movie.imdbID)
+
+    await dbConnect()
+
+    const favorites = await Favorite.find({ slug: { $in: imdbs } })
+
     return omdbMovies.map(movie => ({
         title: movie.Title,
         imdb: movie.imdbID,
@@ -73,6 +83,7 @@ function parseMovie(omdbMovies: SearchResponse[]): Movie[] {
         poster: movie.Poster.includes('http')
             ? movie.Poster
             : `/${movie.Poster}`,
+        favorite: !!favorites.find(favorite => favorite.slug === movie.imdbID),
     }))
 }
 

@@ -20,3 +20,11 @@ Hover.parameters = { pseudo: { hover: true } }
 export const Active = Template.bind({})
 
 Active.parameters = { pseudo: { active: true } }
+
+const TemplateFavorite: Story<ComponentProps<typeof FavoriteButton>> = ({
+    ...args
+}) => <FavoriteButton {...args}>Added</FavoriteButton>
+
+export const Favorite = TemplateFavorite.bind({})
+
+Favorite.args = { favorite: true }

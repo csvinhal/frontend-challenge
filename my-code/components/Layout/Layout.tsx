@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Router from 'next/router'
@@ -25,6 +26,15 @@ const Layout = ({ className, children, showBackIcon }: Props) => {
 
     return (
         <div className="layout">
+            <Head>
+                <title>What&#39;s in - Movies</title>
+                <meta
+                    property="og:title"
+                    content="What&#39;s in - Movies"
+                    key="title"
+                />
+                <meta name="What&#39;s in App, the best place to find your movies"></meta>
+            </Head>
             <header className={className}>
                 <nav>
                     {routerBack}

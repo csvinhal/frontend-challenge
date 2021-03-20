@@ -32,7 +32,6 @@
     --theme-line-height-medium: 28px;
     --theme-line-height-regular: 24px;
 
-
     --theme-letter-spacing-bold: 0.8px;
     --theme-letter-spacing-medium-high: 0.2px;
     --theme-letter-spacing-medium: 0.2px;
@@ -62,7 +61,6 @@ span {
     outline: none;
     border: none;
 }
-
 
 .mt-1 {
     margin-bottom: 8px;

@@ -1,12 +1,9 @@
-import axios, { AxiosError } from 'axios'
+import { AxiosError } from 'axios'
 import { useCallback, useEffect, useState } from 'react'
 import { ErrorResponse } from '../models/error'
 import { FetchMoviesState } from '../models/fetchMoviesState'
 import { MovieResponse } from '../models/movie'
-
-const api = axios.create({
-    baseURL: process.env.BASE_URL,
-})
+import axios from '../utils/axios'
 
 export const useFetchMovies = () => {
     const [state, setState] = useState<FetchMoviesState>({
@@ -32,7 +29,7 @@ export const useFetchMovies = () => {
             error: null,
         })
         try {
-            const response = await api.get<MovieResponse>(`/api/movies`, {
+            const response = await axios.get<MovieResponse>(`/movies`, {
                 params: { title },
             })
             setState({

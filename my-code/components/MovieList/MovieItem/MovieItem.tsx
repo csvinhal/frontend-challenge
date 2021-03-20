@@ -13,7 +13,7 @@ const MovieItem = ({ movie }: Props) => (
             <MovieCard
                 href=""
                 srcImg={movie.poster}
-                favorite={false}
+                favorite={movie.favorite}
                 title={movie.title}
                 year={movie.year}
             />

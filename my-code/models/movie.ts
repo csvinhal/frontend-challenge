@@ -3,6 +3,7 @@ export interface Movie {
     imdb: string
     year: string
     poster: string
+    favorite: boolean
 }
 
 export interface MovieResponse {
