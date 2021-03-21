@@ -17,7 +17,7 @@ const GridItem = ({ children, xs, sm, md, lg, xl }: Props) => {
             className={cx('grid-item', {
                 [`grid-item-xs-${xs}`]: xs,
                 [`grid-item-sm-${sm}`]: sm,
-                [`grid-item-sm-${md}`]: md,
+                [`grid-item-md-${md}`]: md,
                 [`grid-item-lg-${lg}`]: lg,
                 [`grid-item-xl-${xl}`]: xl,
             })}

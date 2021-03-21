@@ -19,8 +19,10 @@ const MovieCard = forwardRef<HTMLAnchorElement, Props>(
             <Image
                 className="movie-card__img"
                 src={srcImg}
-                layout="fill"
+                layout="fixed"
                 alt="Picture of the movie"
+                width={180}
+                height={240}
             />
             {favorite && (
                 <Icon className="movie-card__favorite-icon" icon="heart" />

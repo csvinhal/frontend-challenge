@@ -7,6 +7,8 @@ import Image from 'next/image'
 import { useCallback, useMemo, useState } from 'react'
 import { getMovieDetail, updateMovieFavorite } from '../../api/moviesApi'
 import FavoriteButton from '../../components/FavoriteButton/FavoriteButton'
+import Grid from '../../components/Grid/Grid'
+import GridItem from '../../components/GridItem/GridItem'
 import Labels from '../../components/Labels/Labels'
 import Layout from '../../components/Layout/Layout'
 import SummaryCredit from '../../components/SummaryCredit/SummaryCredit'
@@ -30,78 +32,93 @@ export const MovieDetail = ({
 
     return (
         <Layout className="mb-3" showBackIcon>
-            <div className="summary">
-                <div className="summary__image">
-                    <Image
-                        src={movieDetail.poster}
-                        layout="responsive"
-                        width={480}
-                        height={640}
-                    />
-                </div>
+            <Grid
+                flexDirection="column"
+                flexDirectionMd="row-reverse"
+                justifyContentMd="space-between"
+            >
+                <GridItem md={6}>
+                    <div className="summary__image">
+                        <Image
+                            src={movieDetail.poster}
+                            layout="responsive"
+                            width={480}
+                            height={640}
+                        />
+                    </div>
+                </GridItem>
 
-                <div className="content__detail">
-                    <SummaryLabels
-                        className="mb-3"
-                        runtime={movieDetail.runtime}
-                        rated={movieDetail.rated}
-                        year={movieDetail.year}
-                    />
-
-                    <Typography className="mb-3" size="bold">
-                        {movieDetail.title}
-                    </Typography>
-
-                    <div className="summary__rates">
-                        <Labels className="mb-3" logo="imdb">
-                            {movieDetail.imdbRate}
-                        </Labels>
-                        {movieDetail.rottenRate && (
-                            <Labels className="mb-3" logo="rotten">
-                                {movieDetail.rottenRate}
-                            </Labels>
-                        )}
-                        <FavoriteButton
+                <GridItem md={6}>
+                    <div className="content__detail">
+                        <SummaryLabels
                             className="mb-3"
-                            favorite={movieDetail.favorite}
-                            onClick={toggleFavorite}
-                        >
-                            {favoriteLabel}
-                        </FavoriteButton>
-                    </div>
+                            runtime={movieDetail.runtime}
+                            rated={movieDetail.rated}
+                            year={movieDetail.year}
+                        />
 
-                    <div className="mb-3">
-                        <Typography className="mb-2" color="secundary">
-                            Plot
+                        <Typography className="mb-3" size="bold">
+                            {movieDetail.title}
                         </Typography>
-                        <Typography>{movieDetail.plot}</Typography>
-                    </div>
 
-                    <div className="summary__credits">
-                        <SummaryCredit
-                            className="mt-1"
-                            title="Cast"
-                            list={movieDetail.actors}
-                        />
-                        <SummaryCredit
-                            className="mt-1"
-                            title="Genre"
-                            list={movieDetail.genre}
-                        />
-                        <SummaryCredit
-                            className="mt-1"
-                            title="Director"
-                            list={movieDetail.director}
-                        />
+                        <div className="summary__rates">
+                            <Labels className="mb-3" logo="imdb">
+                                {movieDetail.imdbRate}
+                            </Labels>
+                            {movieDetail.rottenRate && (
+                                <Labels className="mb-3" logo="rotten">
+                                    {movieDetail.rottenRate}
+                                </Labels>
+                            )}
+                            <FavoriteButton
+                                className="mb-3"
+                                favorite={movieDetail.favorite}
+                                onClick={toggleFavorite}
+                            >
+                                {favoriteLabel}
+                            </FavoriteButton>
+                        </div>
+
+                        <div className="mb-3">
+                            <Typography className="mb-2" color="secundary">
+                                Plot
+                            </Typography>
+                            <Typography>{movieDetail.plot}</Typography>
+                        </div>
+
+                        <Grid
+                            flexDirection="column"
+                            alignItems="center"
+                            flexDirectionMd="row"
+                            justifyContentMd="space-around"
+                        >
+                            <GridItem>
+                                <SummaryCredit
+                                    className="summary__credit mt-1"
+                                    title="Cast"
+                                    list={movieDetail.actors}
+                                />
+                            </GridItem>
+                            <GridItem>
+                                <SummaryCredit
+                                    className="summary__credit mt-1"
+                                    title="Genre"
+                                    list={movieDetail.genre}
+                                />
+                            </GridItem>
+                            <GridItem>
+                                <SummaryCredit
+                                    className="summary__credit mt-1"
+                                    title="Director"
+                                    list={movieDetail.director}
+                                />
+                            </GridItem>
+                        </Grid>
                     </div>
-                </div>
-            </div>
+                </GridItem>
+            </Grid>
 
             <style jsx>{`
-                    .summary {
-                        display: flex;
-                        flex-direction: column;
-                    }
     
                     .summary__rates {
                         display: flex;
@@ -113,11 +130,7 @@ export const MovieDetail = ({
                         margin-right: 16px;
                     }
     
-                    .summary__credits {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: center;
+                    :global(.summary__credit) {
                         text-align: center;
                     }
     
@@ -135,13 +148,7 @@ export const MovieDetail = ({
                             margin-bottom 24px;
                         }
     
-                        .summary {
-                            flex-direction: row-reverse;
-                            justify-content: space-between;
-                        }
-    
                         .content__detail {
-                            flex: 0 1 50%;
                             padding: 8px;
                         }
     
@@ -152,10 +159,7 @@ export const MovieDetail = ({
                             margin-left: auto;
                         }
     
-                        .summary__credits {
-                            flex-direction: row;
-                            justify-content: space-around;
-                            align-items: flex-start;
+                        :global(.summary__credit) {
                             text-align: left;
                         }
                     }
