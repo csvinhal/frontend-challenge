@@ -1,27 +1,39 @@
-# NextJS Typescript Boilerplate
+# What's in App
 
-Bootstrap a developer-friendly NextJS app configured with:
+A simple project made with Nexjs, Typescript, Styled-jsx and Mongo to consume the [OMDb API](http://www.omdbapi.com/). It also use Jest for unit tests.
 
--   [Typescript](https://www.typescriptlang.org/)
--   Linting with [ESLint](https://eslint.org/)
--   Formatting with [Prettier](https://prettier.io/)
--   Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
--   Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
+The main features are movie listing and detailing. Also possibility to add or remove a movie as a favorite.
 
-## Deploy your own
+## Setup
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+#### Requirements to use this project:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest&project-name=with-typescript-eslint-jest&repository-name=with-typescript-eslint-jest)
+-   [Node.js](https://nodejs.org/download/)
 
-## How to use
+-   [yarn (Package Manager)](https://yarnpkg.com/getting-started/install)
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+-   [MongoDB](https://www.mongodb.com/): I'm using a MongoDB to save the favorite movies, so you can either pointer to a MongoDB Container or any other instance of the database you have.
+-   [Docker](https://www.docker.com/)\*: Just in case you choose using Mongo via Container
 
-```bash
-npx create-next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-# or
-yarn create next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
+## How to run
+
+-   Install all de dependecies
+
+```sh
+$ yarn install
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+-   Create a _.env.local_ file in the root with using [.env.local.example](./env.local.example) as example.
+-   Run with the command:
+
+```sh
+$ yarn dev
+```
+
+## Run tests
+
+To run tests you just need to execute:
+
+```sh
+$ yarn test
+```
