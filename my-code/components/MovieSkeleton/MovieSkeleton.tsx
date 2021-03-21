@@ -11,27 +11,32 @@ const MovieSkeleton = () => {
                     overflow: hidden;
                     margin: auto;
                     background-color: var(--theme-color-white);
+                    overflow: hidden;
                 }
 
                 .movie-skeleton::after {
-                    display: block;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
                     content: '';
                     position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    background-color: var(--theme-color-light-grey);
+                    transform: translateX(-100%);
+                    background: linear-gradient(
+                        90deg,
+                        transparent,
+                        rgba(122, 140, 153, 0.1),
+                        transparent
+                    );
                     animation: loading 1.5s infinite;
                 }
 
                 @keyframes loading {
                     0% {
-                        opacity: 1;
-                    }
-                    50% {
-                        opacity: 0.4;
+                        transform: translateX(-100%);
                     }
                     100% {
-                        opacity: 1;
+                        transform: translateX(100%);
                     }
                 }
             `}</style>
