@@ -3,7 +3,7 @@ import GridItem from '../GridItem/GridItem'
 import MovieSkeleton from '../MovieSkeleton/MovieSkeleton'
 
 const MoviesLoading = () => (
-    <Grid>
+    <Grid id="movies-loading">
         <GridItem xs md={4} lg={3} xl={2}>
             <MovieSkeleton />
         </GridItem>
