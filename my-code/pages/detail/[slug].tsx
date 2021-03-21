@@ -5,6 +5,7 @@ import {
 } from 'next'
 import Image from 'next/image'
 import { useCallback, useMemo, useState } from 'react'
+import { getMovieDetail, updateMovieFavorite } from '../../api/moviesApi'
 import FavoriteButton from '../../components/FavoriteButton/FavoriteButton'
 import Labels from '../../components/Labels/Labels'
 import Layout from '../../components/Layout/Layout'
@@ -12,17 +13,13 @@ import SummaryCredit from '../../components/SummaryCredit/SummaryCredit'
 import SummaryLabels from '../../components/SummaryLabels/SummaryLabels'
 import Typography from '../../components/Typography/Typography'
 import { MovieDetails } from '../../models/movieDetails'
-import axios from '../../utils/axios'
-
 export const MovieDetail = ({
     movie,
 }: InferGetServerSidePropsType<typeof getServerSideProps>): JSX.Element => {
     const [movieDetail, setMovieDetail] = useState(movie)
     const toggleFavorite = useCallback(async () => {
         const { favorite } = movieDetail
-        const { data } = await axios.post(`/movie-detail/${movieDetail.imdb}`, {
-            favorite,
-        })
+        const { data } = await updateMovieFavorite(movieDetail.imdb, favorite)
         setMovieDetail({ ...movieDetail, favorite: data.favorite })
     }, [movieDetail, setMovieDetail])
 
@@ -171,7 +168,7 @@ export const getServerSideProps: GetServerSideProps<{
     movie: MovieDetails
 }> = async (context: GetServerSidePropsContext) => {
     const { params } = context
-    const res = await axios.get(`/movie-detail/${params.slug}`)
+    const res = await getMovieDetail(params.slug as string)
 
     if (!res.data) {
         return {

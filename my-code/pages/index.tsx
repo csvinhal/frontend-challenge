@@ -7,7 +7,7 @@ import Layout from '../components/Layout/Layout'
 import MovieList from '../components/MovieList/MovieList'
 import MoviesLoading from '../components/MoviesLoading/MoviesLoading'
 import SearchBar from '../components/SearchBar/SearchBar'
-import { useFetchMovies } from '../hooks/fetchMovies'
+import { useFetchMovies } from '../hooks/useFetchMovies'
 
 export const Home = (): JSX.Element => {
     const {
@@ -66,9 +66,4 @@ export const Home = (): JSX.Element => {
     )
 }
 
-export async function getStaticProps() {
-    return {
-        props: {},
-    }
-}
 export default Home

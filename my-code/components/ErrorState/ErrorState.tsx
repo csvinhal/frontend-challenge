@@ -6,7 +6,12 @@ interface Props {
 }
 
 const ErrorState = ({ title, subtitle }: Props) => (
-    <GenericState image="/alert.png" title={title} subtitle={subtitle} />
+    <GenericState
+        id="error-state"
+        image="/alert.png"
+        title={title}
+        subtitle={subtitle}
+    />
 )
 
 export default ErrorState

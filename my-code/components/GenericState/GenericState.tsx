@@ -1,14 +1,15 @@
 import Image from 'next/image'
+import { HTMLAttributes } from 'react'
 import Typography from '../Typography/Typography'
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLDivElement> {
     title: string
     subtitle: string
     image: string
 }
 
-const GenericState = ({ title, subtitle, image }: Props) => (
-    <div className="empty-state">
+const GenericState = ({ title, subtitle, image, ...others }: Props) => (
+    <div className="empty-state" {...others}>
         <div className="empty-state__img">
             <Image
                 src={image}
