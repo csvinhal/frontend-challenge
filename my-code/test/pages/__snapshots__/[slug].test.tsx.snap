@@ -3,23 +3,23 @@
 exports[`Movie detail page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="jsx-4283160941 layout"
+    class="jsx-2234572585 layout"
   >
     <header
-      class="jsx-4283160941 mb-3"
+      class="jsx-2234572585 mb-3"
     >
       <nav
-        class="jsx-4283160941"
+        class="jsx-2234572585"
       >
         <button
-          class="jsx-3157449679 button layout__back"
+          class="jsx-4102583334 button layout__back"
         >
           <svg
             class="button__icon"
-            height="24px"
+            height="1.5rem"
             version="1.1"
             viewBox="0 0 24 24"
-            width="24px"
+            width="1.5rem"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
@@ -65,7 +65,7 @@ exports[`Movie detail page matches snapshot 1`] = `
         </button>
         <a
           aria-label="What's in"
-          class="jsx-4283160941"
+          class="jsx-2234572585"
           href="/"
         >
           <div
@@ -93,17 +93,17 @@ exports[`Movie detail page matches snapshot 1`] = `
       </nav>
     </header>
     <main
-      class="jsx-4283160941"
+      class="jsx-2234572585"
     >
       <button
-        class="jsx-3157449679 button layout__back"
+        class="jsx-4102583334 button layout__back"
       >
         <svg
           class="button__icon"
-          height="24px"
+          height="1.5rem"
           version="1.1"
           viewBox="0 0 24 24"
-          width="24px"
+          width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
@@ -148,13 +148,13 @@ exports[`Movie detail page matches snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="jsx-1175579851 grid flex-direction-md justify-content-md"
+        class="jsx-1175579851 grid flex-direction-md justify-content-md className"
       >
         <div
-          class="jsx-1893218413 grid-item grid-item-md-6"
+          class="jsx-2249794958 grid-item grid-item-md-6"
         >
           <div
-            class="jsx-4039634848 summary__image"
+            class="jsx-3039394109 summary__image"
           >
             <div
               style="display: block; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
@@ -171,13 +171,13 @@ exports[`Movie detail page matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="jsx-1893218413 grid-item grid-item-md-6"
+          class="jsx-2249794958 grid-item grid-item-md-6"
         >
           <div
-            class="jsx-4039634848 content__detail"
+            class="jsx-3039394109 summary__content"
           >
             <div
-              class="jsx-3521565153 movie-label mb-3"
+              class="jsx-3813441065 movie-label mb-3"
             >
               <span
                 class="jsx-570952775 typography"
@@ -185,7 +185,7 @@ exports[`Movie detail page matches snapshot 1`] = `
                 99 min
               </span>
               <span
-                class="jsx-3521565153 movie-label__dot"
+                class="jsx-3813441065 movie-label__dot"
               />
               <span
                 class="jsx-570952775 typography"
@@ -193,13 +193,13 @@ exports[`Movie detail page matches snapshot 1`] = `
                 2008
               </span>
               <span
-                class="jsx-3521565153 movie-label__dot"
+                class="jsx-3813441065 movie-label__dot"
               />
               <div
-                class="jsx-3459775304 labels"
+                class="jsx-3066171714 labels"
               >
                 <div
-                  class="jsx-3459775304 labels__content"
+                  class="jsx-3066171714 labels__content"
                 >
                   <span
                     class="jsx-4266605292 typography labels__typography"
@@ -210,24 +210,24 @@ exports[`Movie detail page matches snapshot 1`] = `
               </div>
             </div>
             <p
-              class="jsx-2478908140 typography mb-3"
+              class="jsx-2478908140 typography summary__title mb-3"
             >
               What Happens in Vegas
             </p>
             <div
-              class="jsx-4039634848 summary__rates"
+              class="jsx-3039394109 summary__rates"
             >
               <div
-                class="jsx-3459775304 labels labels__logo mb-3"
+                class="jsx-3066171714 labels labels__logo mb-3"
               >
                 <div
-                  class="jsx-708943403 imdb-icon"
+                  class="jsx-1034338665 imdb-icon"
                 >
                   <svg
-                    height="16px"
+                    height="1rem"
                     version="1.1"
                     viewBox="0 0 35 16"
-                    width="35px"
+                    width="2.188rem"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
@@ -274,7 +274,7 @@ exports[`Movie detail page matches snapshot 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="jsx-3459775304 labels__content"
+                  class="jsx-3066171714 labels__content"
                 >
                   <span
                     class="jsx-4266605292 typography labels__typography"
@@ -284,16 +284,16 @@ exports[`Movie detail page matches snapshot 1`] = `
                 </div>
               </div>
               <div
-                class="jsx-3459775304 labels labels__logo mb-3"
+                class="jsx-3066171714 labels labels__logo mb-3"
               >
                 <div
-                  class="jsx-2763981032 rotten-icon"
+                  class="jsx-4262843820 rotten-icon"
                 >
                   <svg
-                    height="16px"
+                    height="1rem"
                     version="1.1"
                     viewBox="0 0 16 16"
-                    width="16px"
+                    width="1rem"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
@@ -318,7 +318,7 @@ exports[`Movie detail page matches snapshot 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="jsx-3459775304 labels__content"
+                  class="jsx-3066171714 labels__content"
                 >
                   <span
                     class="jsx-4266605292 typography labels__typography"
@@ -328,14 +328,15 @@ exports[`Movie detail page matches snapshot 1`] = `
                 </div>
               </div>
               <button
-                class="jsx-3217027324 button mb-3"
+                aria-label="Add to favourites"
+                class="jsx-3042737738 button mb-3"
               >
                 <svg
                   class="button__icon"
-                  height="24px"
+                  height="1.5rem"
                   version="1.1"
                   viewBox="0 0 24 24"
-                  width="24px"
+                  width="1.5rem"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <g
@@ -379,7 +380,7 @@ exports[`Movie detail page matches snapshot 1`] = `
               </button>
             </div>
             <div
-              class="jsx-4039634848 mb-3"
+              class="jsx-3039394109 mb-3"
             >
               <p
                 class="jsx-1346695943 typography mb-2"
@@ -396,7 +397,7 @@ exports[`Movie detail page matches snapshot 1`] = `
               class="jsx-3029271787 grid flex-direction-md justify-content-md"
             >
               <div
-                class="jsx-1893218413 grid-item"
+                class="jsx-2249794958 grid-item"
               >
                 <div
                   class="jsx-1206893517 summary__credit mt-1"
@@ -449,7 +450,7 @@ exports[`Movie detail page matches snapshot 1`] = `
                 </div>
               </div>
               <div
-                class="jsx-1893218413 grid-item"
+                class="jsx-2249794958 grid-item"
               >
                 <div
                   class="jsx-1206893517 summary__credit mt-1"
@@ -484,7 +485,7 @@ exports[`Movie detail page matches snapshot 1`] = `
                 </div>
               </div>
               <div
-                class="jsx-1893218413 grid-item"
+                class="jsx-2249794958 grid-item"
               >
                 <div
                   class="jsx-1206893517 summary__credit mt-1"

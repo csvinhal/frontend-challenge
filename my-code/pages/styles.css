@@ -22,20 +22,22 @@
     --theme-font-weight-medium: 500;
     --theme-font-weight-regular: 400;
 
-    --theme-font-size-bold: 80px;
-    --theme-font-size-medium-high: 24px;
-    --theme-font-size-medium: 20px;
-    --theme-font-size-regular: 16px;
+    --theme-font-size-bold: 5rem;
+    --theme-font-size-medium-high: 1.5rem;
+    --theme-font-size-medium: 1.25rem;
+    --theme-font-size-regular: 1rem;
 
-    --theme-line-height-bold: 88px;
-    --theme-line-height-medium-high: 30px;
-    --theme-line-height-medium: 28px;
-    --theme-line-height-regular: 24px;
+    --theme-line-height-bold: 5.5rem;
+    --theme-line-height-medium-high: 1.875rem;
+    --theme-line-height-medium: 1.75rem;
+    --theme-line-height-regular: 1.5rem;
 
     --theme-letter-spacing-bold: 0.8px;
     --theme-letter-spacing-medium-high: 0.2px;
     --theme-letter-spacing-medium: 0.2px;
     --theme-letter-spacing-regular: 0.16px;
+
+    --theme-border-radius: 4px;
 }
 
 html,
@@ -63,25 +65,29 @@ span {
 }
 
 .mt-1 {
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .mt-2 {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 .mt-3 {
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 
 .mb-1 {
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .mb-2 {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 .mb-3 {
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 2rem;
 }

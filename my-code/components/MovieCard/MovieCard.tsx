@@ -19,10 +19,8 @@ const MovieCard = forwardRef<HTMLAnchorElement, Props>(
             <Image
                 className="movie-card__img"
                 src={srcImg}
-                layout="fixed"
+                layout="fill"
                 alt="Picture of the movie"
-                width={180}
-                height={240}
             />
             {favorite && (
                 <Icon className="movie-card__favorite-icon" icon="heart" />
@@ -46,9 +44,9 @@ const MovieCard = forwardRef<HTMLAnchorElement, Props>(
                     .movie-card {
                         display: block;
                         position: relative;
-                        border-radius: 4px;
-                        width: 180px;
-                        height: 240px;
+                        border-radius: var(--theme-border-radius);
+                        width: 11.25rem;
+                        height: 15rem;
                         overflow: hidden;
                         margin: auto;
                     }
@@ -60,8 +58,8 @@ const MovieCard = forwardRef<HTMLAnchorElement, Props>(
 
                     .movie-card :global(.movie-card__favorite-icon) {
                         position: absolute;
-                        top: 12px;
-                        right: 12px;
+                        top: 0.75rem;
+                        right: 0.75rem;
                         color: var(--theme-color-white);
                     }
 
@@ -73,7 +71,7 @@ const MovieCard = forwardRef<HTMLAnchorElement, Props>(
                         height: 100%;
                         background-color: #131c25;
                         display: none;
-                        padding: 12px;
+                        padding: 0.75rem;
                         flex-direction: column;
                         justify-content: space-between;
                     }

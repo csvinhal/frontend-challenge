@@ -6,12 +6,12 @@ const RottenIcon = () => {
             <Icon
                 icon="rotten"
                 viewBox="0 0 16 16"
-                width="16px"
-                height="16px"
+                width="1rem"
+                height="1rem"
             />
             <style jsx>{`
                 .rotten-icon {
-                    padding: 0 12px;
+                    padding: 0 0.75rem;
                     display: inline-flex;
                     align-items: center;
                     border: 1px solid var(--theme-color-red);

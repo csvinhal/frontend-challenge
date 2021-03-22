@@ -28,12 +28,12 @@ const SummaryLabels = ({ className, runtime, year, rated }: Props) => (
             }
 
             .movie-label__dot {
-                height: 2px;
-                width: 2px;
+                height: 0.125rem;
+                width: 0.125rem;
                 background-color: var(--theme-color-secundary);
                 border-radius: 50%;
                 display: inline-block;
-                margin: 0 8px;
+                margin: 0 0.5rem;
             }
         `}</style>
     </div>

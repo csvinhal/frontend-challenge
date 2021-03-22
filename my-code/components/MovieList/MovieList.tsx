@@ -8,7 +8,7 @@ interface Props {
 }
 
 const MovieList = ({ movies }: Props) => (
-    <Grid>
+    <Grid justifyContent="center" justifyContentMd="flex-start">
         {movies.map(movie => (
             <MovieItem key={movie.imdb} movie={movie} />
         ))}

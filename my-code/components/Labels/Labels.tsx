@@ -38,12 +38,12 @@ const Labels = ({ className, children, logo }: Props) => {
             <style jsx>{`
                 .labels__logo {
                     display: inline-flex;
-                    border-radius: 4px;
+                    border-radius: var(--theme-border-radius);
                     overflow: hidden;
                 }
 
                 .labels__logo :global(.labels__content) {
-                    padding: 8px;
+                    padding: 0.5rem;
                     background-color: transparent;
                     border-radius: 0 4px 4px 0;
                     border-width: 1px 1px 1px 0;
@@ -53,9 +53,9 @@ const Labels = ({ className, children, logo }: Props) => {
                 .labels__content {
                     display: inline-flex;
                     align-items: center;
-                    padding: 4px 6px;
+                    padding: 0.25rem 0.375rem;
                     background-color: var(--theme-color-light-grey);
-                    border-radius: 4px;
+                    border-radius: var(--theme-border-radius);
                 }
 
                 .labels:not(.labels__logo) :global(.labels__typography) {

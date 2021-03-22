@@ -38,6 +38,7 @@ const Grid = forwardRef<HTMLDivElement, Props>(
             justifyContentMd,
             alignItems,
             alignItemsMd,
+            className,
             ...others
         }: Props,
         ref,
@@ -47,6 +48,7 @@ const Grid = forwardRef<HTMLDivElement, Props>(
                 'flex-direction-md': flexDirectionMd,
                 'justify-content-md': justifyContentMd,
                 'align-items-md': alignItemsMd,
+                className,
             })}
             {...others}
             ref={ref}

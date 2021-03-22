@@ -13,8 +13,8 @@ const SearchBar = forwardRef<HTMLInputElement, Props>((props: Props, ref) => (
         <Icon
             className="search-bar__icon"
             icon="magnifier"
-            width="16px"
-            height="16px"
+            width="1rem"
+            height="1rem"
             viewBox="0 0 16 16"
         />
         <label className="search-bar__label" htmlFor="search-bar">
@@ -30,14 +30,18 @@ const SearchBar = forwardRef<HTMLInputElement, Props>((props: Props, ref) => (
             .search-bar {
                 display: flex;
                 align-items: center;
-                padding: 12px;
+                padding: 0.75rem;
                 background-color: var(--theme-color-white);
-                border-radius: 4px;
+                border-radius: 0.25rem;
+            }
+
+            .search-bar:focus-within {
+                box-shadow: 0px 0px 4px var(--theme-color-secundary);
             }
 
             .search-bar :global(.search-bar__icon) {
                 color: var(--theme-color-light-grey);
-                margin-right: 12px;
+                margin-right: 0.75rem;
             }
 
             .search-bar__label {
@@ -48,15 +52,11 @@ const SearchBar = forwardRef<HTMLInputElement, Props>((props: Props, ref) => (
                 width: 100%;
                 outline: none;
                 border: none;
+                font-size: var(--theme-font-size-regular);
             }
 
             .search-bar--disabled {
                 background-color: var(--theme-color-disabled);
-            }
-
-            .search-bar :global(.search-bar__icon) {
-                color: var(--theme-color-light-grey);
-                margin-right: 12px;
             }
 
             .search-bar--disabled .search-bar__input {

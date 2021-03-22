@@ -29,20 +29,20 @@ const GenericState = ({ title, subtitle, image, ...others }: Props) => (
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                height: 260px;
+                height: 16.25rem;
             }
 
             .empty-state__img {
                 position: relative;
-                margin-bottom: 16px;
-                max-width: 396px;
-                max-height: 193px;
+                margin-bottom: 1rem;
+                max-width: 24.75rem;
+                max-height: 12.063rem;
                 height: 100%;
                 width: 100%;
             }
 
             .empty-state :global(.empty-state__title) {
-                margin-bottom: 8px;
+                margin-bottom: 0.5rem;
             }
         `}</style>
     </div>

@@ -8,7 +8,7 @@ interface Props {
     movie: Movie
 }
 const MovieItem = ({ movie }: Props) => (
-    <GridItem xs md={4} lg={3} xl={2}>
+    <GridItem>
         <Link href={`/detail/${movie.imdb}`} passHref>
             <MovieCard
                 href=""

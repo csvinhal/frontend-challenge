@@ -37,7 +37,7 @@ export const Home = (): JSX.Element => {
             <Grid>
                 <GridItem xs>
                     <div
-                        className={cx('container__search', {
+                        className={cx('container__search mb-4 ', {
                             'container__search--is-empty-state':
                                 !loading && !data,
                         })}
@@ -54,10 +54,6 @@ export const Home = (): JSX.Element => {
             {content}
 
             <style jsx>{`
-                .container__search {
-                    margin-bottom: 32px;
-                }
-
                 .container__search--is-empty-state {
                     margin-bottom: 25vh;
                 }

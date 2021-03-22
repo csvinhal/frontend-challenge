@@ -5,9 +5,9 @@ const MovieSkeleton = () => {
                 .movie-skeleton {
                     display: block;
                     position: relative;
-                    border-radius: 4px;
-                    width: 180px;
-                    height: 240px;
+                    border-radius: var(--theme-border-radius);
+                    width: 11.25rem;
+                    height: 15rem;
                     overflow: hidden;
                     margin: auto;
                     background-color: var(--theme-color-white);

@@ -15,7 +15,7 @@ const ButtonIcon = forwardRef<HTMLButtonElement, Props>(
                 .button {
                     display: block;
                     border: none;
-                    padding: 8px;
+                    padding: 0.5rem;
                     background-color: transparent;
                     outline: none;
                     cursor: pointer;

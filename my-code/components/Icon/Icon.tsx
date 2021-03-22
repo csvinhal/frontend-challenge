@@ -26,8 +26,8 @@ const Icon = ({ className, icon, width, height, viewBox }: Props) => {
 }
 
 Icon.defaultProps = {
-    width: '24px',
-    height: '24px',
+    width: '1.5rem',
+    height: '1.5rem',
     viewBox: '0 0 24 24',
 }
 

@@ -3,17 +3,17 @@
 exports[`Home page should matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="jsx-4283160941 layout"
+    class="jsx-2234572585 layout"
   >
     <header
-      class="jsx-4283160941 container mb-3"
+      class="jsx-2234572585 container mb-3"
     >
       <nav
-        class="jsx-4283160941"
+        class="jsx-2234572585"
       >
         <a
           aria-label="What's in"
-          class="jsx-4283160941"
+          class="jsx-2234572585"
           href="/"
         >
           <div
@@ -41,26 +41,26 @@ exports[`Home page should matches snapshot 1`] = `
       </nav>
     </header>
     <main
-      class="jsx-4283160941"
+      class="jsx-2234572585"
     >
       <div
         class="jsx-1504584403 grid"
       >
         <div
-          class="jsx-1893218413 grid-item grid-item-xs-true"
+          class="jsx-2249794958 grid-item grid-item-xs-true"
         >
           <div
-            class="jsx-3457752361 container__search container__search--is-empty-state"
+            class="jsx-2629231181 container__search mb-4  container__search--is-empty-state"
           >
             <form
-              class="jsx-4082834922 search-bar"
+              class="jsx-4126210830 search-bar"
             >
               <svg
                 class="search-bar__icon"
-                height="16px"
+                height="1rem"
                 version="1.1"
                 viewBox="0 0 16 16"
-                width="16px"
+                width="1rem"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <g
@@ -105,13 +105,13 @@ exports[`Home page should matches snapshot 1`] = `
                 </g>
               </svg>
               <label
-                class="jsx-4082834922 search-bar__label"
+                class="jsx-4126210830 search-bar__label"
                 for="search-bar"
               >
                 Search movies...
               </label>
               <input
-                class="jsx-4082834922 search-bar__input"
+                class="jsx-4126210830 search-bar__input"
                 id="search-bar"
                 placeholder="Search movies..."
               />
@@ -123,13 +123,13 @@ exports[`Home page should matches snapshot 1`] = `
         class="jsx-1504584403 grid"
       >
         <div
-          class="jsx-1893218413 grid-item grid-item-xs-true"
+          class="jsx-2249794958 grid-item grid-item-xs-true"
         >
           <div
-            class="jsx-492954756 empty-state"
+            class="jsx-4159469862 empty-state"
           >
             <div
-              class="jsx-492954756 empty-state__img"
+              class="jsx-4159469862 empty-state__img"
             >
               <div
                 style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"

@@ -28,7 +28,8 @@ const GridItem = ({ children, xs, sm, md, lg, xl }: Props) => {
                     display: block;
                     margin: 0;
                     box-sizing: border-box;
-                    padding: 4px;
+                    padding: 0.25rem;
+                    flex: 0 1 auto;
                 }
 
                 .grid-item-xs-true {
@@ -102,7 +103,7 @@ const GridItem = ({ children, xs, sm, md, lg, xl }: Props) => {
                         display: block;
                         margin: 0;
                         box-sizing: border-box;
-                        padding: 8px;
+                        padding: 0.5rem;
                     }
                     .grid-item-sm-true {
                         flex-grow: 1;

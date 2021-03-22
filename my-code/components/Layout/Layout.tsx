@@ -57,8 +57,8 @@ const Layout = ({ className, children, showBackIcon }: Props) => {
             <style jsx>{`
                 .layout {
                     display: block;
-                    margin: 24px auto 0 auto;
-                    padding: 0 16px;
+                    margin: 1.5rem auto 0 auto;
+                    padding: 0 1rem;
                     width: 100%;
                 }
 
@@ -69,7 +69,7 @@ const Layout = ({ className, children, showBackIcon }: Props) => {
 
                 nav :global(.layout__back) {
                     display: block;
-                    margin-right: 16px;
+                    margin-right: 1rem;
                 }
 
                 main :global(.layout__back) {
@@ -78,7 +78,7 @@ const Layout = ({ className, children, showBackIcon }: Props) => {
 
                 @media (min-width: 768px) {
                     .layout {
-                        padding: 0 32px;
+                        padding: 0 2rem;
                     }
 
                     nav :global(.layout__back) {

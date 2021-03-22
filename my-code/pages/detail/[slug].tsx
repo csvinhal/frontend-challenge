@@ -33,6 +33,7 @@ export const MovieDetail = ({
     return (
         <Layout className="mb-3" showBackIcon>
             <Grid
+                className="summary"
                 flexDirection="column"
                 flexDirectionMd="row-reverse"
                 justifyContentMd="space-between"
@@ -49,7 +50,7 @@ export const MovieDetail = ({
                 </GridItem>
 
                 <GridItem md={6}>
-                    <div className="content__detail">
+                    <div className="summary__content">
                         <SummaryLabels
                             className="mb-3"
                             runtime={movieDetail.runtime}
@@ -57,7 +58,7 @@ export const MovieDetail = ({
                             year={movieDetail.year}
                         />
 
-                        <Typography className="mb-3" size="bold">
+                        <Typography className="summary__title mb-3" size="bold">
                             {movieDetail.title}
                         </Typography>
 
@@ -74,6 +75,7 @@ export const MovieDetail = ({
                                 className="mb-3"
                                 favorite={movieDetail.favorite}
                                 onClick={toggleFavorite}
+                                aria-label={favoriteLabel}
                             >
                                 {favoriteLabel}
                             </FavoriteButton>
@@ -119,7 +121,6 @@ export const MovieDetail = ({
             </Grid>
 
             <style jsx>{`
-    
                     .summary__rates {
                         display: flex;
                         flex-direction: row;
@@ -127,7 +128,7 @@ export const MovieDetail = ({
                     }
     
                     .summary__rates > :global(*:not(last-children)) {
-                        margin-right: 16px;
+                        margin-right: 1rem;
                     }
     
                     :global(.summary__credit) {
@@ -142,8 +143,18 @@ export const MovieDetail = ({
                         border-radius: 8px;
                         margin: 0 auto 16px auto;
                     }
+
+                    @media (max-width: 767px) {
+                        .summary__content :global(.summary__title) {
+                            font-size: var(--theme-font-size-medium-high);
+                            font-weight: var(--theme-font-weight-medium-high);
+                            line-height: var(--theme-line-height-medium-high);
+                            letter-spacing: var(--theme-letter-spacing-medium-high);
+                        }
+                    }
     
                     @media (min-width: 768px) {
+
                         :global(.back__button) {
                             margin-bottom 24px;
                         }

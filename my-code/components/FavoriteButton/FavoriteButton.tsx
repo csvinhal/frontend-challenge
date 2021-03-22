@@ -31,11 +31,12 @@ const FavoriteButton = forwardRef<HTMLButtonElement, Props>(
                     align-items: center;
                     color: var(--theme-color-secundary);
                     border: 1px solid var(--theme-color-secundary);
-                    border-radius: 4px;
+                    border-radius: var(--theme-border-radius);
                     background-color: transparent;
-                    padding: 12px 16px 12px 12px;
+                    padding: 0.75rem 1rem 0.75rem 0.75rem;
                     outline: none;
                     cursor: pointer;
+                    transition: all 0.3s;
                 }
 
                 .button:hover {
@@ -52,7 +53,11 @@ const FavoriteButton = forwardRef<HTMLButtonElement, Props>(
 
                 .button :global(.button__icon) {
                     color: transparent;
-                    margin-right: 12px;
+                    margin-right: 0.75rem;
+                }
+
+                .button:focus {
+                    box-shadow: 0px 0px 3px var(--theme-color-secundary);
                 }
 
                 .button:hover :global(.button__icon),
