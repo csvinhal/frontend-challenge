@@ -25,7 +25,8 @@ const Custom404 = () => {
                     size="medium-high"
                     color="secundary"
                 >
-                    Ops! It seems we didn't find the movie you're looking for
+                    Ops! It seems we didn&apos;t find the movie you&apos;re
+                    looking for
                 </Typography>
 
                 <Button onClick={onClick}>
