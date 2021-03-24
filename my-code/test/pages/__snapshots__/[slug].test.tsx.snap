@@ -150,7 +150,7 @@ exports[`Movie detail page matches snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="jsx-1175579851 grid flex-direction-md justify-content-md className"
+        class="jsx-1175579851 grid summary flex-direction-md justify-content-md"
       >
         <div
           class="jsx-2249794958 grid-item grid-item-md-6"
