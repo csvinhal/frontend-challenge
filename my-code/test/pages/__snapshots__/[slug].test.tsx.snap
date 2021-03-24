@@ -12,6 +12,7 @@ exports[`Movie detail page matches snapshot 1`] = `
         class="jsx-2234572585"
       >
         <button
+          aria-label="Return to home page"
           class="jsx-4102583334 button layout__back"
         >
           <svg
@@ -96,6 +97,7 @@ exports[`Movie detail page matches snapshot 1`] = `
       class="jsx-2234572585"
     >
       <button
+        aria-label="Return to home page"
         class="jsx-4102583334 button layout__back"
       >
         <svg
@@ -244,7 +246,7 @@ exports[`Movie detail page matches snapshot 1`] = `
                         transform="translate(-392.000000, -882.000000)"
                       >
                         <g
-                          id="998d9f9c579873b1d738668122a52170"
+                          id="icon__imdb"
                           transform="translate(392.000000, 882.000000)"
                         >
                           <g
@@ -306,7 +308,7 @@ exports[`Movie detail page matches snapshot 1`] = `
                       <g
                         fill="#FFFFFF"
                         fill-rule="nonzero"
-                        id="7.Labels"
+                        id="icon__rotten"
                         transform="translate(-382.000000, -834.000000)"
                       >
                         <path
@@ -351,7 +353,7 @@ exports[`Movie detail page matches snapshot 1`] = `
                       transform="translate(-530.000000, -344.000000)"
                     >
                       <g
-                        id="icon-heart-white"
+                        id="icon__heart"
                         transform="translate(530.000000, 344.000000)"
                       >
                         <rect

@@ -19,7 +19,11 @@ const Layout = ({ className, children, showBackIcon }: Props) => {
     const routerBack = useMemo(
         () =>
             showBackIcon && (
-                <ButtonIcon className="layout__back" onClick={onClick} />
+                <ButtonIcon
+                    className="layout__back"
+                    onClick={onClick}
+                    aria-label="Return to home page"
+                />
             ),
         [showBackIcon, onClick],
     )

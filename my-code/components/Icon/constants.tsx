@@ -9,7 +9,7 @@ export default {
         >
             <g id="8.icons" transform="translate(-530.000000, -344.000000)">
                 <g
-                    id="icon-heart-white"
+                    id="icon__heart"
                     transform="translate(530.000000, 344.000000)"
                 >
                     <rect
@@ -122,7 +122,7 @@ export default {
                 fillRule="nonzero"
             >
                 <g
-                    id="998d9f9c579873b1d738668122a52170"
+                    id="icon__imdb"
                     transform="translate(392.000000, 882.000000)"
                 >
                     <g
@@ -159,7 +159,7 @@ export default {
             fillRule="evenodd"
         >
             <g
-                id="7.Labels"
+                id="icon__rotten"
                 transform="translate(-382.000000, -834.000000)"
                 fill="#FFFFFF"
                 fillRule="nonzero"

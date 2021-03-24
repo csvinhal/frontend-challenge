@@ -44,11 +44,10 @@ const Grid = forwardRef<HTMLDivElement, Props>(
         ref,
     ) => (
         <div
-            className={cx('grid', {
+            className={cx('grid', className, {
                 'flex-direction-md': flexDirectionMd,
                 'justify-content-md': justifyContentMd,
                 'align-items-md': alignItemsMd,
-                className,
             })}
             {...others}
             ref={ref}

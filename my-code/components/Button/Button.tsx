@@ -1,20 +1,24 @@
 import cx from 'classnames'
-import { ButtonHTMLAttributes, DetailedHTMLProps, forwardRef } from 'react'
-import Icon from '../Icon/Icon'
+import {
+    ButtonHTMLAttributes,
+    DetailedHTMLProps,
+    forwardRef,
+    ReactNode,
+} from 'react'
 
 interface Props
     extends DetailedHTMLProps<
         ButtonHTMLAttributes<HTMLButtonElement>,
         HTMLButtonElement
     > {
-    className?: string
+    children: ReactNode
 }
 
-const ButtonIcon = forwardRef<HTMLButtonElement, Props>(
+const Button = forwardRef<HTMLButtonElement, Props>(
     // eslint-disable-next-line react/prop-types
-    ({ className, ...others }, ref) => (
+    ({ className, children, ...others }, ref) => (
         <button className={cx('button', className)} {...others} ref={ref}>
-            <Icon className="button__icon" icon="arrow" aria-hidden />
+            {children}
             <style jsx>{`
                 .button {
                     display: block;
@@ -23,6 +27,8 @@ const ButtonIcon = forwardRef<HTMLButtonElement, Props>(
                     background-color: transparent;
                     outline: none;
                     cursor: pointer;
+                    border: 1px solid var(--theme-color-secundary);
+                    border-radius: var(--theme-border-radius);
                 }
 
                 .button :global(.button__icon) {
@@ -37,6 +43,6 @@ const ButtonIcon = forwardRef<HTMLButtonElement, Props>(
     ),
 )
 
-ButtonIcon.displayName = 'ButtonIcon'
+Button.displayName = 'Button'
 
-export default ButtonIcon
+export default Button

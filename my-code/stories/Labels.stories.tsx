@@ -16,3 +16,14 @@ export const Default = Template.bind({})
 Default.args = {
     children: '18+',
 }
+
+const TemplateLogo: Story<ComponentProps<typeof Labels>> = ({ ...args }) => (
+    <Labels {...args}>{}</Labels>
+)
+
+export const WithLogo = TemplateLogo.bind({})
+
+WithLogo.args = {
+    children: '7.7/10',
+    logo: 'imdb',
+}

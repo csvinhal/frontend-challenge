@@ -25,8 +25,8 @@ describe('Home page', () => {
             Promise.resolve(axiosResponse),
         )
 
-        const { container } = render(<Home />, {})
-        const input = container.querySelector('#search-bar')
+        const { container, getByLabelText } = render(<Home />, {})
+        const input = getByLabelText('Search movies...')
         expect(input).toBeTruthy()
 
         fireEvent.change(input, { target: { value: 'What' } })
@@ -34,9 +34,5 @@ describe('Home page', () => {
         await waitFor(() => expect(moviesApi.getMovies).toHaveBeenCalled())
 
         expect(container.querySelectorAll('a.movie-card')).toHaveLength(10)
-    })
-
-    afterEach(() => {
-        jest.clearAllMocks()
     })
 })
