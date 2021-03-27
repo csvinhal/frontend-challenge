@@ -36,7 +36,7 @@ const SearchBar = forwardRef<HTMLInputElement, Props>((props: Props, ref) => (
             }
 
             .search-bar:focus-within {
-                box-shadow: 0px 0px 4px var(--theme-color-secundary);
+                box-shadow: var(--theme-box-shadow);
             }
 
             .search-bar :global(.search-bar__icon) {

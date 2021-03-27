@@ -6,7 +6,7 @@ const MoviesLoading = () => (
     <Grid
         id="movies-loading"
         justifyContent="center"
-        justifyContentMd="flex-start"
+        justifyContentSm="flex-start"
     >
         <GridItem>
             <MovieSkeleton />

@@ -19,17 +19,30 @@ const Custom404 = () => {
                 <Typography element="h1" size="bold">
                     404
                 </Typography>
-                <Typography
-                    className="mb-2"
-                    element="h2"
-                    size="medium-high"
-                    color="secundary"
-                >
-                    Ops! It seems we didn&apos;t find the movie you&apos;re
-                    looking for
-                </Typography>
+                <div className="not-found__description">
+                    <Typography
+                        className="mb-2"
+                        element="h2"
+                        size="medium-high"
+                        color="secundary"
+                    >
+                        The page you have requested has flown the coop.
+                    </Typography>
+                    <Typography
+                        className="mb-2"
+                        element="span"
+                        color="secundary"
+                    >
+                        Perhaps you are here because:
+                        <ul>
+                            <li>The page has moved</li>
+                            <li>The page no longer exists</li>
+                            <li>You like 404 pages</li>
+                        </ul>
+                    </Typography>
+                </div>
 
-                <Button onClick={onClick}>
+                <Button onClick={onClick} aria-label="Go to homepage">
                     <Typography element="span">Go to homepage</Typography>
                 </Button>
             </Grid>
@@ -40,6 +53,15 @@ const Custom404 = () => {
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                }
+
+                .not-found__description {
+                    text-align: left;
+                }
+
+                .not-found__description ul {
+                    margin-top: 0.5rem;
+                    padding-left: 1rem;
                 }
             `}</style>
         </div>

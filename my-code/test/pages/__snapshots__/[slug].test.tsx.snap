@@ -150,7 +150,7 @@ exports[`Movie detail page matches snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="jsx-1175579851 grid summary flex-direction-md justify-content-md"
+        class="jsx-533276974 grid summary flex-direction-md justify-content-md"
       >
         <div
           class="jsx-2249794958 grid-item grid-item-md-6"
@@ -331,7 +331,7 @@ exports[`Movie detail page matches snapshot 1`] = `
               </div>
               <button
                 aria-label="Add to favourites"
-                class="jsx-3042737738 button mb-3"
+                class="jsx-1783334891 button mb-3"
               >
                 <svg
                   class="button__icon"
@@ -396,7 +396,7 @@ exports[`Movie detail page matches snapshot 1`] = `
               </p>
             </div>
             <div
-              class="jsx-3029271787 grid flex-direction-md justify-content-md"
+              class="jsx-3777709134 grid flex-direction-md justify-content-md"
             >
               <div
                 class="jsx-2249794958 grid-item"

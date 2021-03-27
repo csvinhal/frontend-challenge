@@ -21,10 +21,13 @@ type AlignItemsType =
 interface Props extends HTMLAttributes<HTMLDivElement> {
     children: ReactNode
     flexDirection?: FlexDirectionType
+    flexDirectionSm?: FlexDirectionType
     flexDirectionMd?: FlexDirectionType
     justifyContent?: JustifyContentType
+    justifyContentSm?: JustifyContentType
     justifyContentMd?: JustifyContentType
     alignItems?: AlignItemsType
+    alignItemsSm?: AlignItemsType
     alignItemsMd?: AlignItemsType
 }
 
@@ -33,10 +36,13 @@ const Grid = forwardRef<HTMLDivElement, Props>(
         {
             children,
             flexDirection,
+            flexDirectionSm,
             flexDirectionMd,
             justifyContent,
+            justifyContentSm,
             justifyContentMd,
             alignItems,
+            alignItemsSm,
             alignItemsMd,
             className,
             ...others
@@ -45,8 +51,11 @@ const Grid = forwardRef<HTMLDivElement, Props>(
     ) => (
         <div
             className={cx('grid', className, {
+                'flex-direction-sm': flexDirectionSm,
                 'flex-direction-md': flexDirectionMd,
+                'justify-content-sm': justifyContentSm,
                 'justify-content-md': justifyContentMd,
+                'align-items-sm': alignItemsSm,
                 'align-items-md': alignItemsMd,
             })}
             {...others}
@@ -69,6 +78,18 @@ const Grid = forwardRef<HTMLDivElement, Props>(
                 @media (min-width: 576px) {
                     width: calc(100% + 16px);
                     margin: -8px;
+
+                    .flex-direction-sm {
+                        flex-direction: ${flexDirectionSm};
+                    }
+
+                    .justify-content-sm {
+                        justify-content: ${justifyContentSm};
+                    }
+
+                    .align-items-sm {
+                        align-items: ${alignItemsSm};
+                    }
                 }
 
                 @media (min-width: 768px) {

@@ -38,6 +38,7 @@
     --theme-letter-spacing-regular: 0.16px;
 
     --theme-border-radius: 4px;
+    --theme-box-shadow: 0px 0px 2px var(--theme-color-white);
 }
 
 html,

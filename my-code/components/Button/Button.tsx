@@ -29,14 +29,16 @@ const Button = forwardRef<HTMLButtonElement, Props>(
                     cursor: pointer;
                     border: 1px solid var(--theme-color-secundary);
                     border-radius: var(--theme-border-radius);
+                    transition: all 0.3s ease;
                 }
 
-                .button :global(.button__icon) {
-                    color: #8b93a6;
+                .button:focus {
+                    border: 1px solid var(--theme-color-white);
+                    box-shadow: var(--theme-box-shadow);
                 }
 
-                .button:hover :global(.button__icon) {
-                    color: var(--theme-color-white);
+                .button:hover {
+                    border: 1px solid var(--theme-color-white);
                 }
             `}</style>
         </button>

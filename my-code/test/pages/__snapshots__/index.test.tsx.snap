@@ -44,7 +44,7 @@ exports[`Home page should matches snapshot 1`] = `
       class="jsx-2234572585"
     >
       <div
-        class="jsx-1504584403 grid"
+        class="jsx-3428674614 grid"
       >
         <div
           class="jsx-2249794958 grid-item grid-item-xs-true"
@@ -53,7 +53,7 @@ exports[`Home page should matches snapshot 1`] = `
             class="jsx-2629231181 container__search mb-4  container__search--is-empty-state"
           >
             <form
-              class="jsx-4126210830 search-bar"
+              class="jsx-2950469003 search-bar"
             >
               <svg
                 class="search-bar__icon"
@@ -105,13 +105,13 @@ exports[`Home page should matches snapshot 1`] = `
                 </g>
               </svg>
               <label
-                class="jsx-4126210830 search-bar__label"
+                class="jsx-2950469003 search-bar__label"
                 for="search-bar"
               >
                 Search movies...
               </label>
               <input
-                class="jsx-4126210830 search-bar__input"
+                class="jsx-2950469003 search-bar__input"
                 id="search-bar"
                 placeholder="Search movies..."
               />
@@ -120,7 +120,7 @@ exports[`Home page should matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="jsx-1504584403 grid"
+        class="jsx-3428674614 grid"
       >
         <div
           class="jsx-2249794958 grid-item grid-item-xs-true"

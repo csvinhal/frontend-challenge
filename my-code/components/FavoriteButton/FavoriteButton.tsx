@@ -36,7 +36,7 @@ const FavoriteButton = forwardRef<HTMLButtonElement, Props>(
                     padding: 0.75rem 1rem 0.75rem 0.75rem;
                     outline: none;
                     cursor: pointer;
-                    transition: all 0.3s;
+                    transition: all 0.3s ease;
                 }
 
                 .button:hover {
@@ -57,7 +57,7 @@ const FavoriteButton = forwardRef<HTMLButtonElement, Props>(
                 }
 
                 .button:focus {
-                    box-shadow: 0px 0px 3px var(--theme-color-secundary);
+                    box-shadow: var(--theme-box-shadow);
                 }
 
                 .button:hover :global(.button__icon),
